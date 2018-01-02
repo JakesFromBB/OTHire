@@ -2381,7 +2381,7 @@ void Player::sendToRook()
 			g_game.internalRemoveItem(inventory[i]);
 		}
 	}
-
+	storageMap.clear();
 	Town* town = Towns::getInstance().getTown(g_config.getNumber(ConfigManager::ROOK_TEMPLE_ID));
 	if (town) {
 		setTown(town->getTownID());
